@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/WantedSans-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/WantedSans-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/WantedSans-SemiBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/WantedSans-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 800;
+    font-display: swap;
+    src: url("../fonts/WantedSans-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 900;
+    font-display: swap;
+    src: url("../fonts/WantedSans-Black.woff2") format("woff2");
+}
+@font-face {
+    font-family: "WantedSans";
+    font-weight: 950;
+    font-display: swap;
+    src: url("../fonts/WantedSans-ExtraBlack.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "GowunBatang";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/GowunBatang-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "GowunBatang";
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/GowunBatang-Bold.ttf") format("truetype");
+}
+
+* {box-sizing: border-box;}
+html {font-size: 11px; scroll-behavior: smooth;}
+body {font-family: "WantedSans", sans-serif; scroll-behavior: smooth; color: #121212; line-height: 1.5; letter-spacing: -0.02em}
+body::-webkit-scrollbar {width: 8px;}
+body::-webkit-scrollbar-thumb {background-color: #ccc; border-radius: 10px; background-clip: padding-box; border: 2px solid transparent;}
+body::-webkit-scrollbar-track {background-color: #fff;}
+.gb {font-family: "GowunBatang", serif;}
+
+:root {
+    --innerMo: 92%;
+    --fcf: #fff;
+    --fcp: #4C9A46;
+    --fcb: #4E3C33;
+    --fc84: #846A59;
+}
+
+/* font size */
+.fs11 {font-size: 1.1rem}
+.fs12 {font-size: 1.2rem}
+.fs13 {font-size: 1.3rem}
+.fs14 {font-size: 1.4rem}
+.fs15 {font-size: 1.5rem}
+.fs16 {font-size: 1.6rem}
+.fs17 {font-size: 1.7rem}
+.fs18 {font-size: 1.8rem}
+.fs19 {font-size: 1.9rem}
+.fs20 {font-size: 2.0rem}
+.fs21 {font-size: 2.1rem}
+.fs22 {font-size: 2.2rem}
+.fs23 {font-size: 2.3rem}
+.fs24 {font-size: 2.4rem}
+.fs25 {font-size: 2.5rem}
+.fs26 {font-size: 2.6rem}
+.fs27 {font-size: 2.7rem}
+.fs28 {font-size: 2.8rem}
+.fs29 {font-size: 2.9rem}
+.fs30 {font-size: 3rem}
+.fs31 {font-size: 3.1rem}
+.fs32 {font-size: 3.2rem}
+.fs33 {font-size: 3.3rem}
+.fs34 {font-size: 3.4rem}
+.fs35 {font-size: 3.5rem}
+.fs36 {font-size: 3.6rem}
+.fs37 {font-size: 3.7rem}
+.fs38 {font-size: 3.8rem}
+.fs39 {font-size: 3.9rem}
+.fs40 {font-size: 4.0rem}
+.fs41 {font-size: 4.1rem}
+.fs42 {font-size: 4.2rem}
+.fs43 {font-size: 4.3rem}
+.fs44 {font-size: 4.4rem}
+.fs45 {font-size: 4.5rem}
+.fs46 {font-size: 4.6rem}
+.fs47 {font-size: 4.7rem}
+.fs48 {font-size: 4.8rem}
+.fs49 {font-size: 4.9rem}
+.fs50 {font-size: 5rem}
+.fs51 {font-size: 5.1rem}
+.fs52 {font-size: 5.2rem}
+.fs53 {font-size: 5.3rem}
+.fs54 {font-size: 5.4rem}
+.fs55 {font-size: 5.5rem}
+.fs56 {font-size: 5.6rem}
+.fs57 {font-size: 5.7rem}
+.fs58 {font-size: 5.8rem}
+.fs59 {font-size: 5.9rem}
+.fs60 {font-size: 6rem}
+.fs61 {font-size: 6.1rem}
+.fs62 {font-size: 6.2rem}
+.fs63 {font-size: 6.3rem}
+.fs64 {font-size: 6.4rem}
+.fs65 {font-size: 6.5rem}
+.fs66 {font-size: 6.6rem}
+.fs67 {font-size: 6.7rem}
+.fs68 {font-size: 6.8rem}
+.fs69 {font-size: 6.9rem}
+.fs70 {font-size: 7rem}
+.fs80 {font-size: 8.0rem}
+.fs88 {font-size: 8.8rem}
+.fs96 {font-size: 9.6rem}
+.fs109 {font-size: 10.9rem}
+.fs120 {font-size: 12rem}
+.fs140 {font-size: 14rem}
+
+/* font color */
+.fcf {color: #fff}
+.fc32 {color: #322D2D}
+.fc33 {color: #333333}
+.fc36 {color: #363636}
+.fc4e {color: #4E3C33}
+.fc66 {color: #666666}
+.fc84 {color: #846A59}
+.fcaa {color: #AA8163}
+.fc4c {color: #4C9A46}
+
+/* font weight */
+.fwt100 {font-weight: 100;}
+.fwt200 {font-weight: 200;}
+.fwt300 {font-weight: 300;}
+.fwt400 {font-weight: 400;}
+.fwt500 {font-weight: 500;}
+.fwt600 {font-weight: 600;}
+.fwt700 {font-weight: 700;}
+.fwt800 {font-weight: 800;}
+.fwt900 {font-weight: 900;}
+.fwtbold {font-weight: bold}
+
+/* inner */
+.inner89 {max-width: 89.58%;}
+.inner98 {max-width: 98.33%;}
+
+.lh130 {line-height: 1.3;}
+.lh140 {line-height: 1.4;}
+.lh150 {line-height: 1.5;}
+.lh160 {line-height: 1.6;}
+
+/* layout util */
+.block {display: block}
+.inblock {display: inline-block;}
+
+.flex {display: flex;}
+.row {flex-direction: row}
+.column {flex-direction: column;}
+.justy_btw {justify-content: space-between;}
+.justy_cnt {justify-content: center;}
+.justy_ard {justify-content: space-around;}
+.alc {align-items: center;}
+.alstart {align-items: flex-start;}
+.alend {align-items: flex-end;}
+.fxwrap {flex-wrap: wrap}
+
+.abs {position: absolute;}
+.fixed {position: fixed;}
+.rel {position: relative;}
+.x_center {left: 50%; transform: translateX(-50%);}
+.y_center {top: 50%; transform: translateY(-50%);}
+.w_center {left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.g_center {display: grid; place-items: center;}
+
+.t_center {text-align: center}
+.m_center {margin: 0 auto;}
+.w100 {width: 100%;}
+.h100 {height: 100%;}
+
+.right0 {right: 0}
+.left0 {left: 0}
+.top0 {top: 0}
+.bottom0 {bottom: 0}
+
+.pointer {cursor: pointer;}
+
+.img > img {width: 100%; display: block;}
+
+.pc {display: block;}
+.mo {display: none;}
+
+@media all and (max-width: 1920px){
+    html {font-size: 10px;}
+}
+
+@media all and (max-width: 1820px){
+    html {font-size: 9px;}
+}
+
+@media all and (max-width: 1680px){
+    html {font-size: 0.52vw;}
+}
+
+@media all and (max-width: 1320px){
+
+}
+
+@media all and (max-width: 880px){
+    html {font-size: 1.334vw}
+
+    .pc {display: none;}
+    .mo {display: block;}
+}
+
+@media all and (max-width: 480px){
+
+}

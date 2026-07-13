@@ -1,0 +1,665 @@
+
+/*―――――――――――――――
+    헤더
+――――――――――――――――*/
+#header {z-index: 9999;}
+#header::before {content: ''; display: block; position: absolute; width: 100%; height: 100%; background: #fff; opacity: 0; transition: 0.3s ease; border-bottom: 1px solid #D9C7B1;}
+#header .pcHeader {}
+#header .pcHeader .inner {padding: 4.4rem 0 2.4rem; max-width: 94.583%; transition: 0.3s ease;}
+#header .pcHeader .logo {width: 40.6rem;}
+#header .pcHeader .logo img {transition: 0.3s;}
+#header .pcHeader .logo img.df {}
+#header .pcHeader .logo img.hv {opacity: 0;}
+#header .pcHeader .gnb {gap: 6rem; transition: 0.3s;}
+#header .pcHeader .gnb .gnbLst {min-width: 6rem; transition: 0.5s ease;}
+#header .pcHeader .gnb .gnbLst .tit {transition: 0.1s ease;}
+#header .pcHeader .gnb .gnbLst .tit::before {content: ''; display: block; position: absolute; width: 100%; height: 0.2rem; background-color: var(--fcp); top: calc(100% + 0.8rem); opacity: 0; transition: 0.1s ease;}
+#header .pcHeader .lnb {padding-top: 3.2rem; opacity: 0; visibility: hidden; transform: translateY(-1rem); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;}
+#header .pcHeader .lnb .lnbLst {}
+#header .pcHeader .lnb .lnbLst + .lnbLst {margin-top: 1.6rem;}
+#header .pcHeader .lnb .lnbLst a {}
+#header .pcHeader .util {}
+#header .pcHeader .util li {}
+#header .pcHeader .util li + li {padding-left: 0.8rem; margin-left: 0.8rem;}
+#header .pcHeader .util li + li::before {content: ''; display: block; position: absolute; width: 1px; height: 1.2rem; background: rgba(255,255,255,0.6); left: 0; top: 50%; transform: translateY(-50%);}
+
+#header .pcHeader .gnb .gnbLst:hover {}
+#header .pcHeader .gnb .gnbLst:hover .tit {font-weight: bold; color: var(--fcp);}
+#header .pcHeader .gnb .gnbLst:hover .tit::before {opacity: 1;}
+#header .pcHeader .lnb .lnbLst a:hover {font-weight: 500; color: #212121;}
+
+#header.fix {}
+#header.fix::before {opacity: 1;}
+#header.fix .pcHeader {}
+#header.fix .pcHeader .inner {padding: 2.4rem 0;}
+#header.fix .pcHeader .logo img.df {opacity: 0;}
+#header.fix .pcHeader .logo img.hv {opacity: 1;}
+#header.fix .pcHeader .gnb {color: #212121;}
+#header.fix .pcHeader .util {color: #212121;}
+#header.fix .pcHeader .util li + li::before {background-color: #212121;}
+
+#header.act {}
+#header.act::before {opacity: 1; height: 25.2rem;}
+#header.act .pcHeader .logo img.df {opacity: 0;}
+#header.act .pcHeader .logo img.hv {opacity: 1;}
+#header.act .pcHeader .gnb {color: #212121;}
+#header.act .pcHeader .lnb {opacity: 1; visibility: visible; transform: translateY(0); transition-delay: 0.2s;}
+#header.act .pcHeader .gnb .gnbLst {min-width: 16.7rem;}
+#header.act .pcHeader .util {color: #212121;}
+#header.act .pcHeader .util li + li::before {background-color: #212121;}
+
+
+@media all and (max-width: 880px){
+    #header {}
+    #header::before {display: none;}
+    #header .moHeader {}
+    #header .moHead {background-color: #fff; z-index: 1;}
+    #header .moHead .inn {max-width: var(--innerMo); padding: 2.8rem 0;}
+    #header .moHead .logo {width: 41.8rem;}
+    #header .moHead .menuBtn {width: 4.4rem;}
+    #header .moPanel {background: #fff; width: 100%; height: 100vh; left: 0; top: 0; padding-top: 10rem; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease, visibility 0.3s ease;}
+    #header .loginArea {background: #F8F7F4;}
+    #header .loginArea .lst {max-width: var(--innerMo); padding: 2.55rem 1rem;}
+    #header .loginArea .lst li {}
+    #header .loginArea .lst li + li {padding-left: 2rem; margin-left: 2rem;}
+    #header .loginArea .lst li + li::before {content: ''; display: block; position: absolute; width: 1px; height: 50%; background-color: #333; opacity: 0.6; left: 0; top: 50%; transform: translateY(-50%);}
+    #header .menuArea {}
+    #header .menuArea .gnb {max-width: var(--innerMo);}
+    #header .menuArea .gnbLst {}
+    #header .menuArea .gnbLst .tit {padding: 3.7rem 1rem; border-bottom: 1px solid #ccc; cursor: pointer;}
+    #header .menuArea .gnbLst .tit::before {content: ''; display: block; position: absolute; width: 3.5rem; height: 3.5rem; background: url('/img/ic_menu_arr.svg') center/contain; right: 1rem; top: 50%; transform: translateY(-50%); transition: transform 0.3s ease;}
+    #header .menuArea .lnb {overflow: hidden; max-height: 0; padding: 0 0; transition: max-height 0.35s ease, padding 0.35s ease;}
+    #header .menuArea .lnb li {}
+    #header .menuArea .lnb li + li {}
+    #header .menuArea .lnb li a {display: block; padding: 1.95rem 1rem;}
+    
+    #header .moPanel.on {opacity: 1; visibility: visible; pointer-events: auto;}
+    #header .menuArea .gnbLst.on .tit::before {transform: translateY(-50%) rotate(180deg);}
+    #header .menuArea .gnbLst.on .lnb {max-height: 60rem; padding: 1rem 0;}
+}
+
+
+/*―――――――――――――――
+    메인
+――――――――――――――――*/
+#main {}
+
+#main .s1 {padding: 1.6rem 0;}
+
+
+
+
+
+
+
+
+/*―――――――――――――――
+    서브비쥬얼
+――――――――――――――――*/
+#subVisual {}
+#subVisual .bgImg {}
+#subVisual .titArea {bottom: 15.2rem;}
+#subVisual .titArea .title {}
+#subVisual .titArea .breadcrumb {gap: 1rem;}
+#subVisual .subTabMenu {bottom: 4rem; gap: 1.2rem}
+#subVisual .subTabMenu .menuBtn {width: 22rem;}
+#subVisual .subTabMenu .menuBtn a {display: block; padding: 1.45rem 2rem; border-radius: 0.4rem; background: rgba(255, 255, 255, 0.1); transition: 0.1s;}
+#subVisual .subTabMenu .menuBtn a::before {content: ''; display: block; position: absolute; width: calc(100% - 0.2rem); height: calc(100% - 0.2rem); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 0.4rem; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: 0.1s;}
+#subVisual .subTabMenu .menuBtn:hover a {font-weight: bold;}
+#subVisual .subTabMenu .menuBtn:hover a::before {border: 0.15rem solid #fff;}
+#subVisual .subTabMenu .menuBtn.on a {background: var(--fc84); font-weight: bold; pointer-events: none; cursor: default;}
+#subVisual .subTabMenu .menuBtn.on a::before {border: 0.15rem solid var(--fc84);}
+#subVisual .utilBtn {justify-content: flex-end; bottom: 4.2rem; gap: 1.2rem; right: 5.2%;}
+#subVisual .utilBtn .btn {transition: 0.1s; width: 5.2rem; height: 5.2rem;}
+#subVisual .utilBtn .btn:hover {filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.15));}
+
+@media all and (max-width: 880px){
+    #container {margin-top: 10rem;}
+
+    #subVisual {}
+    #subVisual .bgImg {}
+    #subVisual .titArea {max-width: var(--innerMo); flex-direction: column; align-items: baseline; gap: 1.2rem; bottom: 24.4rem;}
+    #subVisual .titArea .title {font-size: 4.8rem;}
+    #subVisual .titArea .breadcrumb {font-size: 2.4rem;}
+    #subVisual .subTabMenu {bottom: 13.2rem; gap: 0.6rem; max-width: var(--innerMo); font-size: 2.4rem;}
+    #subVisual .subTabMenu .menuBtn {width: 100%;}
+    #subVisual .subTabMenu .menuBtn a {padding: 1.8rem 2rem;}
+    #subVisual .utilBtn {position: relative; bottom: auto; right: 0; max-width: var(--innerMo); margin: 0 auto; padding: 2.4rem 0;}
+    #subVisual .utilBtn .btn {width: 6rem; height: 6rem;}
+}
+
+
+/*―――――――――――――――
+    서브 공통
+――――――――――――――――*/
+#sub {}
+#sub .inner {}
+#sub .subCommTit {margin-top: 8rem; font-weight: bold;}
+
+@media all and (max-width: 880px){
+    #sub {}
+    #sub .inner {max-width: var(--innerMo);}
+    #sub .subCommTit {font-size: 4.8rem; margin-top: 1.6rem;}
+}
+
+/*―――――――――――――――
+    모달창
+――――――――――――――――*/
+.commModal {position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 99999;}
+.commModal .modalBg {height: 100%; background: rgba(0,0,0,0.7);}
+.commModal .modalBox {position: absolute; width: 100%; max-width: 92rem; background: #fff; box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.32); left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 0.4rem; max-height: 76rem; padding: 3.2rem 3.2rem 6rem;}
+.commModal .modalTit {margin-bottom: 2.4rem;}
+.commModal .modalTit .tit {}
+.commModal .modalTit .closeBtn {}
+
+.commModal .contArea {max-height: 62rem; overflow: auto;}
+.commModal .modalSwiper {border-radius: 0.4rem; overflow: hidden;}
+.commModal .modalSwiper::before {content: ''; display: block; position: absolute; width: 100%; height: 14%; background: #000000;
+background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); bottom: 0; z-index: 9;}
+.commModal .modalSwiper .slidePg {position: absolute; left: 2.4rem; bottom: 2.4rem; top: auto; width: auto; padding: 0.8rem 2rem; font-size: 1.6rem; color: #fff; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.4); border-radius: 8rem; line-height: 1; z-index: 9;}
+.commModal .modalSwiper .slidePg .fractionBar {margin: 0 0.6rem; opacity: 0.6;}
+.commModal .modalSwiper .slideNav {position: absolute; right: 2.4rem; bottom: 2.4rem; gap: 2rem; z-index: 9;}
+.commModal .modalSwiper .slideNav .prev,
+.commModal .modalSwiper .slideNav .next {width: 2.8rem; cursor: pointer; flex-shrink: 0; opacity: 0.6;}
+.commModal .modalSwiper .slideNav .prev:hover,
+.commModal .modalSwiper .slideNav .next:hover {opacity: 1;}
+.commModal .modalDetail {}
+.commModal .detailBox {padding: 3.2rem 2.8rem 3.4rem;}
+.commModal .detailBox + .detailBox {border-top: 1px solid #ccc;}
+.commModal .detailBox .boxTit {margin-bottom: 2.4rem;}
+.commModal .detailBox .boxTit::before {content: ''; display: block; position: absolute; width: 1.8rem; height: 1.8rem; background: url('/img/sub/ic_modal_tit.svg') center/contain; left: -2.6rem; top: 50%; transform: translateY(-50%);}
+.commModal .detailBox .infoLst {}
+.commModal .detailBox .infoLst .lst {}
+.commModal .detailBox .infoLst .lst + .lst {margin-top: 1.6rem;}
+.commModal .detailBox .infoLst .lst.mt40 {margin-top: 4rem;}
+.commModal .detailBox .infoLst .lst .opt {min-width: 10rem; margin-right: 1.2rem;}
+.commModal .detailBox .infoLst .lst .con {}
+.commModal .detailBox .infoLst .lst .con li {}
+.commModal .detailBox .infoLst .lst .con li + li {margin-top: 0.4rem;}
+.commModal .detailBox .infoLst .lst .con li span.gtxt {font-size: 1.6rem; color: #888; padding-left: 1.2rem;}
+.commModal .detailBox .infoLst .lst .fac {gap: 1.6rem}
+.commModal .detailBox .infoLst .lst .fac li {display: flex; flex-direction: column; align-items: center; text-align: center; width: calc((100% - 8rem) / 6); gap: 0.4rem}
+.commModal .detailBox .infoLst .lst .fac li img {max-width: 7.2rem;}
+.commModal .detailBox .infoLst .lst .fac li span {font-size: 1.6rem; color: #363636; line-height: 1.3;}
+.commModal .modalBtns {gap: 0.8rem; margin: 4rem 0 2rem;}
+.commModal .modalBtns button {padding: 1.25rem; font-size: 1.8rem; width: 100%; border-radius: 0.2rem; transition: 0.2s; line-height: 1.4;}
+.commModal .modalBtns .confirmBtn {font-weight: bold; border: 1px solid rgba(255,255,255,0.2); background: var(--fcp); color: #fff;}
+.commModal .modalBtns .confirmBtn:hover {background: #32662D;}
+.commModal .modalBtns .closeBtnW {border: 1px solid #666; background: #fff; color: #363636;}
+.commModal .modalBtns .closeBtnW:hover {background: #846A59; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: bold;}
+
+@media all and (max-width: 880px){
+    .commModal {}
+    .commModal .modalBg {}
+    .commModal .modalBox {max-width: var(--innerMo); padding: 3.2rem 3rem; max-height: 90vh;}
+    .commModal .modalTit {}
+    .commModal .modalTit .tit {font-size: 4.6rem;}
+    .commModal .modalTit .closeBtn {width: 5.2rem;}
+
+    .commModal .contArea {max-height: 70vh;}
+    .commModal .modalSwiper {}
+    .commModal .modalSwiper .slideNav img {display: block; width: 100%;}
+    .commModal .modalSwiper .slidePg {font-size: 2.2rem;}
+    .commModal .detailBox .boxTit {font-size: 3.6rem;}
+    .commModal .detailBox .infoLst .lst {flex-direction: column; align-items: baseline; gap: 1.2rem}
+    .commModal .detailBox .infoLst .lst + .lst {margin-top: 2.4rem;}
+    .commModal .detailBox .infoLst .lst .opt {font-size: 3.2rem; line-height: 1.4;}
+    .commModal .detailBox .infoLst .lst .con {font-size: 3rem; line-height: 1.4;}
+    .commModal .detailBox .infoLst .lst .con li {flex-direction: column; align-items: baseline; gap: 1.2rem;}
+    .commModal .detailBox .infoLst .lst .con li span.gtxt {font-size: 2.4rem;}
+    .commModal .detailBox .infoLst .lst .fac li {width: calc((100% - 6.4rem) / 5);}
+    .commModal .detailBox .infoLst .lst .fac li img {max-width: 9.2rem;}
+    .commModal .detailBox .infoLst .lst .fac li span {font-size: 2.2rem;}
+    .commModal .modalBtns {}
+    .commModal .modalBtns button {font-size: 2.8rem; padding: 3rem 0; line-height: 1;}
+}
+
+
+/*―――――――――――――――
+    검색바
+――――――――――――――――*/
+.searchPanel {background-color: #F3F0EF; border-radius: 0.4rem; padding: 2.4rem; gap: 1.2rem}
+.searchPanel .searchField {width: 48rem; background-color: #fff; flex-shrink: 0; border: 1px solid #ccc; border-radius: 0.4rem; padding: 1.5rem 1.6rem;}
+.searchPanel .searchField .fieldLabel {padding-right: 1.6rem; margin-right: 2.4rem; font-weight: 500; flex-shrink: 0;}
+.searchPanel .searchField .fieldLabel::before {content: ''; display: block; position: absolute; width: 1px; height: 50%; background-color: #212121; right: 0; top: 50%; transform: translateY(-50%);}
+
+.searchPanel .dateField {}
+.searchPanel .dateField .fieldInner {display: flex; align-items: center; cursor: pointer;}
+.searchPanel .dateField .dateValue {color: #363636; display: flex; align-items: center; gap: 2.4rem}
+.searchPanel .dateField .dateValue span {}
+.searchPanel .dateField .calendarIcon {margin-left: auto;}
+
+.searchPanel .roomField {display: flex; align-items: center; position: relative;}
+.searchPanel .roomField .roomSelect {width: 100%;}
+.searchPanel .roomField .roomSelect .roomTrigger {display: flex; width: 100%; justify-content: space-between;}
+.searchPanel .roomField .roomSelect .roomValue {color: #363636; font-size: 1.6rem;}
+.searchPanel .roomField .roomSelect .arrIcon {transition: transform 0.3s ease;}
+.searchPanel .roomField .roomOptions {left: 0; top: calc(100% + 0.4rem); z-index: 10; display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease;}
+.searchPanel .roomField .roomOptions .roomOptionsList {min-height: 0; overflow: hidden; background: #fff; border: 0 solid #ccc; border-radius: 0.4rem;}
+.searchPanel .roomField .roomOption {padding: 1.2rem 1.6rem; color: #333; cursor: pointer; transition: background 0.15s ease; border-radius: 0.4rem;}
+.searchPanel .roomField .roomOption:hover {background: #F5F5F5;}
+.searchPanel .roomField .roomOption.on {background: #846A59; font-weight: bold; color: #fff;}
+.searchPanel .roomField.open .roomSelect .arrIcon {transform: rotate(180deg);}
+.searchPanel .roomField.open .roomOptions {grid-template-rows: 1fr;}
+.searchPanel .roomField.open .roomOptions .roomOptionsList {border-width: 1px; padding: 0.1rem;}
+
+.searchPanel .guestField {display: flex; align-items: center;}
+.searchPanel .guestField .guestControl {display: flex; width: 100%;}
+.searchPanel .guestField .guestControl .guestCount {}
+.searchPanel .guestField .guestControl .guestStepper {margin-left: auto; display: flex; gap: 2.4rem; align-items: center;}
+.searchPanel .guestField .guestControl .guestStepper .stepBtn {width: 1.8rem; height: 1.8rem;}
+.searchPanel .guestField .guestControl .guestStepper .stepMinus {background: url('/img/sub/ic_search_minus.svg') center/contain no-repeat;}
+.searchPanel .guestField .guestControl .guestStepper .stepPlus {background: url('/img/sub/ic_search_plus.svg') center/contain no-repeat;}
+
+.searchPanel .searchBtn {width: 100%; text-align: center; background: #4E3C33; color: #fff; font-family: inherit; font-size: 1.6rem; border-radius: 0.2rem; transition: 0.1s; border: 1px solid #4E3C33;}
+.searchPanel .searchBtn:hover {border: 1px solid #9B7B66; background: #846A59; font-weight: 600;}
+
+
+@media all and (max-width: 880px){
+    .searchPanel {flex-direction: column; font-size: 3rem;}
+    .searchPanel .searchField {width: 100%; padding: 3.2rem;}
+    .searchPanel .dateField {}
+    .searchPanel .dateField .dateValue {gap: 1.2rem;}
+    .searchPanel .dateField .calendarIcon {width: 2.6rem;}
+    .searchPanel .roomField {}
+    .searchPanel .roomField .roomSelect .roomValue {font-size: 3rem;}
+    .searchPanel .roomField .roomSelect .arrIcon {width: 2.4rem;}
+    .searchPanel .guestField {}
+    .searchPanel .guestField .guestControl .guestStepper .stepBtn {width: 2.4rem; height: 2.4rem;}
+    .searchPanel .searchBtn {font-size: 2.8rem; padding: 2.45rem 0;}
+}
+
+/*―――――――――――――――――――――――――――
+    예약 달력 (v-calendar 커스텀)
+―――――――――――――――――――――――――――――*/
+.vc-popover-content {border: 1px solid #ccc; border-radius: 0.4rem; box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.32);}
+.vc-container.vc-bordered {border: none;}
+.vc-pane-layout {}
+.vc-pane {min-width: 0; padding: 3.4rem 2.4rem; min-width: 32rem;}
+.vc-weeks {padding: 0;}
+.vc-pane-header-wrapper {top: 2.8rem; max-width: 91%; left: 50%; transform: translateX(-50%); z-index: 1;}
+
+.vc-header {padding: 0; margin: 0; margin-bottom: 2.4rem; height: auto;}
+.vc-header .vc-title {font-size: 1.6rem; font-weight: 500; color: #212121; background: none; padding: 0; line-height: 1.2;}
+.vc-header .vc-title:hover {opacity: 1;}
+.vc-header .vc-arrow {width: 3.2rem; height: 3.2rem; color: #4E3C33; background: none; cursor: pointer; border-radius: 0.4rem; z-index: 1;}
+.vc-header .vc-arrow:hover {color: #4E3C33; background: #EFEAE6;}
+.vc-header .vc-arrow.is-disabled {opacity: 0.25; cursor: default;}
+
+.vc-weekdays {padding: 0; margin-bottom: 1.2rem;}
+.vc-weekday {font-size: 1.5rem; font-weight: 400; color: #363636; line-height: 1.2; padding: 0;}
+.vc-weekday-1 {color: #e0574e;}
+
+.vc-day {min-height: 0; padding: 0;}
+.vc-highlights {display: none;} 
+.vc-day.is-not-in-month .customDayCell {visibility: hidden;}
+
+.customDayCell {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 3.6rem; margin: 0.2rem; border-radius: 0.6rem; font-size: 1.5rem; color: #363636; cursor: pointer;}
+.customDayCell .dayNumber {line-height: 1;}
+.customDayCell .statusText {margin-top: 0; font-size: 0.8rem; line-height: 1;}
+.vc-day.weekday-1 .customDayCell {color: #e0574e;} 
+
+.vc-day .customDayCell.isPast,
+.vc-day .customDayCell.isSoldOut {background: #f0f0f0; color: #bbb; cursor: not-allowed;} 
+.vc-day .customDayCell.isStart,
+.vc-day .customDayCell.isEnd {background: #4C9A46; color: #fff;}
+.vc-day .customDayCell.isBetween {background: #E0E8CC;}
+.vc-day .customDayCell.isFull {background: #E8DFCC;}
+
+.calendarFooter {padding: 2rem 2.4rem; border-top: 1px solid #ccc;}
+.calendarLegend {display: flex; flex-wrap: wrap; gap: 1.6rem;}
+.calendarLegend .legendItem {display: flex; align-items: center; gap: 0.6rem; font-size: 1.3rem; color: #363636;}
+.calendarLegend .legendBox {width: 1.6rem; height: 1.6rem; border-radius: 0.3rem;}
+.calendarLegend .boxSelect {background: #4C9A46;}
+.calendarLegend .boxDisabled {background: #f0f0f0;}
+.calendarLegend .boxAvailable {background: #fff; border: 1px solid #ccc;}
+.calendarNotice {margin-top: 1.2rem; font-size: 1.3rem; color: #363636;}
+
+@media all and (max-width: 880px){
+    .vc-pane-layout {grid-template-columns: none !important;}
+    .vc-pane-container {}
+    .vc-pane {min-width: 60rem; padding: 3rem 2rem;}
+    .vc-weeks {min-width: auto;}
+    .vc-header .vc-title {font-size: 2.5rem;}
+    .vc-weekday {font-size: 2.5rem;}
+    .customDayCell {font-size: 2.5rem; height: 5.5rem;}
+    .customDayCell .statusText {font-size: 1.6rem; margin-top: 0.6rem;}
+    .calendarLegend .legendItem {font-size: 2rem;}
+    .calendarNotice {font-size: 2rem}
+}
+
+/*―――――――――――――――――――――――――――
+    서브 - 공유하우스 > 예약
+―――――――――――――――――――――――――――――*/
+.houseRsv {padding: 4rem 0 16rem;}
+.houseRsv .currentRoom {display: flex; gap: 1.2rem; margin: 6rem 0;}
+.houseRsv .roomList {gap: 12rem 6.2rem}
+.houseRsv .roomList .lst {width: calc((100% - 12.4rem) / 3);}
+.houseRsv .roomList .thumb {border-radius: 0.4rem; overflow: hidden;}
+.houseRsv .roomList .thumb img {transition: 0.6s;}
+.houseRsv .roomList .txts {margin: 2.4rem 0 4rem;}
+.houseRsv .roomList .txts .name {}
+.houseRsv .roomList .txts .info {padding: 1.6rem 0 2.4rem; border-bottom: 1px solid #ccc;}
+.houseRsv .roomList .txts .infoLst {}
+.houseRsv .roomList .txts .infoLst + .infoLst {margin-top: 0.4rem; gap: 0.4rem}
+.houseRsv .roomList .txts .infoLst img {}
+.houseRsv .roomList .txts .cost {padding-top: 1.6rem; gap: 0.4rem; line-height: 1.4;}
+.houseRsv .roomList .txts .cost .num {}
+.houseRsv .roomList .txts .cost .txt {}
+.houseRsv .roomList .btns {gap: 0.8rem;}
+.houseRsv .roomList .btns button {width: 100%; border-radius: 0.2rem; padding: 1.2rem 0; font-size: 1.8rem; transition: 0.3s;}
+.houseRsv .roomList .btns .reservBtn {background: var(--fcp); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: bold;}
+.houseRsv .roomList .btns .detailBtn {border: 1px solid #666; color: #363636; font-weight: 500;}
+
+.houseRsv .roomList .lst:hover .thumb img {transform: scale(1.08);}
+.houseRsv .roomList .btns .reservBtn:hover {background: #32662D;}
+.houseRsv .roomList .btns .detailBtn:hover {background: #846A59; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: bold}
+
+@media all and (max-width: 880px){
+    .houseRsv {padding: 4rem 0 26rem;}
+    .houseRsv .currentRoom {flex-wrap: wrap;}
+    .houseRsv .currentRoom .date {width: 100%;}
+    .houseRsv .roomList {gap: 8rem; flex-direction: column;}
+    .houseRsv .roomList .lst {width: 100%;}
+    .houseRsv .roomList .thumb {}
+    .houseRsv .roomList .txts {}
+    .houseRsv .roomList .txts .name {font-size: 4.8rem;}
+    .houseRsv .roomList .txts .info {font-size: 3rem;}
+    .houseRsv .roomList .txts .infoLst img {width: 3.5rem;}
+    .houseRsv .roomList .txts .cost {}
+    .houseRsv .roomList .txts .cost .num {font-size: 4.4rem;}
+    .houseRsv .roomList .txts .cost .txt {font-size: 2.4rem; line-height: 1;}
+    .houseRsv .roomList .btns {}
+    .houseRsv .roomList .btns button {font-size: 3rem; padding: 2.1rem 0;}
+}
+
+/*――――――――――――――――――――――――――――――――――――
+    하우스&오피스 예약폼
+―――――――――――――――――――――――――――――――――――――*/
+.reservForm {justify-content: space-between; padding: 6rem 0 10rem;}
+.reservForm .formPanel {flex: 1; max-width: 101.7rem;}
+
+.reservForm .formSection {}
+.reservForm .formSection + .formSection {margin-top: 6rem;}
+.reservForm .formTitle {padding: 1.2rem 0; border-bottom: 1px solid #888; margin-bottom: 2.4rem;}
+.reservForm .formArea {}
+.reservForm .formRow {display: flex; align-items: center;}
+.reservForm .formRow + .formRow {margin-top: 1.2rem;}
+.reservForm .formRow.alstart {align-items: baseline;}
+
+.reservForm .formLabel {font-size: 1.8rem; min-width: 14.6rem; flex-shrink: 0; font-weight: 500;}
+.reservForm .formLabel label {}
+
+.reservForm .formCont {font-size: 1.6rem; width: 100%;}
+
+.reservForm .formInput {height: 4.8rem; color: #333; padding: 0 1.6rem; line-height: 1.2; border: 1px solid #ccc; border-radius: 0.2rem; width: 32rem; flex-shrink: 0; font-size: 1.6rem;}
+.reservForm .formInput::placeholder {color: #999;}
+.reservForm .formInput:focus-visible {border: 1px solid #333; outline: none;}
+.reservForm .noneInput {background: #F7F7F7; border: 1px solid #888;}
+.reservForm .formInputFull {width: 100%;}
+.reservForm .formSelect {width: 100%; height: 4.8rem; border: 1px solid #ccc; padding: 1.3rem 1.6rem; font-size: 1.6rem;  -webkit-appearance: none; -moz-appearance: none; appearance: none; background: url('/img/sub/ic_select_arr.svg') right 1.6rem center / 1.8rem 1.8rem no-repeat; line-height: 1.2; cursor: pointer;}
+.reservForm .formSelect:focus-visible {border: 1px solid #333; outline: none;}
+.reservForm .formNotice {color: #666; padding-top: 0.8rem;}
+.reservForm .formTextarea {padding: 1.6rem; line-height: 1.2; border: 1px solid #ccc; border-radius: 0.2rem; width: 100%; box-shadow: none; font-family: inherit; color: #333; min-height: 12rem; font-size: 1.6rem;}
+.reservForm .formTextarea::placeholder {color: #999;}
+.reservForm .formTextarea:focus-visible {border: 1px solid #333; outline: none;}
+
+.reservForm .emailCont {display: flex; align-items: center; gap: 1.2rem;}
+.reservForm .emailCont .emailAt {font-size: 2rem;}
+
+.reservForm .addressCont {display: flex; flex-direction: column; gap: 0.8rem;}
+.reservForm .addressCont .zipRow {display: flex; gap: 0.4rem}
+.reservForm .addressCont .addressBtn {color: #fff; background-color: var(--fcb); width: 14.6rem; border-radius: 0.2rem; border: 1px solid var(--fcb); transition: 0.2s; font-size: 1.6rem;}
+.reservForm .addressCont .addressBtn:hover {background-color: #846A59; border: 1px solid #9B7B66;}
+
+.reservForm .radioCont {display: flex; padding: 1.65rem 0; align-items: center; flex-wrap: wrap; gap: 3.2rem;}
+.reservForm .radioCont .radioItem {}
+.reservForm .radioCont .radioItem .radioInput {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+.reservForm .radioCont .radioItem .radioText {padding-left: 2.6rem; cursor: pointer; display: inline-block; line-height: 1.2;}
+.reservForm .radioCont .radioItem .radioText::before {content: ''; display: block; position: absolute; width: 1.8rem; height: 1.8rem; background: url('/img/sub/ic_chk_off.svg') center/contain no-repeat; left: 0; top: 0.1rem;}
+.reservForm .radioCont .radioItem .radioInput:checked + .radioText::before {background: url('/img/sub/ic_chk_on.svg') center/contain no-repeat;}
+
+.reservForm .fileCont {}
+.reservForm .fileCont .fileRowGrid {display: flex; gap: 2.4rem; margin-bottom: 1.2rem;}
+.reservForm .fileCont .fileRow {display: flex; gap: 0.4rem}
+.reservForm .fileCont .fileRow .formInput {}
+.reservForm .fileCont .fileRow .fileBtn {color: #fff; background: #333; border: 1px solid #333; border-radius: 0.2rem; width: 12rem; text-align: center; line-height: 1; cursor: pointer; line-height: 4.6rem;}
+.reservForm .fileCont .fileRow .fileInput {display: none;}
+.reservForm .fileCont .fileNotice {}
+.reservForm .fileCont .noticeArea {}
+.reservForm .fileCont .noticeArea + .noticeArea {margin-top: 1.2rem;}
+.reservForm .fileCont .noticeArea .noticeTit {font-weight: 500; padding-bottom: 0.8rem;}
+.reservForm .fileCont .noticeArea .noticeLst {color: #666; padding-left: 1.6rem;}
+.reservForm .fileCont .noticeArea .noticeLst li {}
+.reservForm .fileCont .noticeArea .noticeLst li.indent {padding-left: 1rem;}
+
+.reservForm .useArea {gap: 6rem; display: flex;;}
+.reservForm .useArea .useTit {padding-bottom: 1.5rem; justify-content: space-between;}
+.reservForm .useArea .useTit .tit {}
+.reservForm .useArea .useTit .date {color: var(--fcp);}
+.reservForm .useArea .useTicket {width: 100%;}
+.reservForm .useArea .ticketLst {}
+.reservForm .useArea .ticketLst .lst {}
+.reservForm .useArea .ticketLst .lst + .lst {margin-top: 1.1rem;}
+.reservForm .useArea .ticketLst .lst input {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+.reservForm .useArea .ticketLst .lst input + .ticketLabel {text-align: center; line-height: normal; padding: 1.35rem 0; font-size: 1.8rem; text-align: center; display: block; border: 1px solid #ccc; border-radius: 0.4rem; cursor: pointer;}
+.reservForm .useArea .ticketLst .lst input:checked + .ticketLabel {border: 1px solid #846A59; background-color: #846A59; color: #fff; font-weight: 600;}
+.reservForm .useArea .useDate {width: 52rem; flex-shrink: 0;}
+.reservForm .useArea .selectDate {border: 1px solid #ccc; border-radius: 0.4rem; }
+.reservForm .useArea .selectDate .vc-pane {padding: 3.6rem 3.6rem 2rem;}
+.reservForm .useArea .selectDate .vc-header {padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid #ccc;}
+.reservForm .useArea .selectDate .vc-header .vc-title {font-size: 2rem; font-weight: 600;}
+.reservForm .useArea .selectDate .vc-pane-header-wrapper .vc-header {padding: 0; margin: 0; border: 0;}
+.reservForm .useArea .selectDate .customDayCell {height: 5.6rem;}
+.reservForm .useArea .selectDate .calendarLegend {padding: 1.35rem 0; margin: 1.2rem 3.6rem; border-top: 1px solid #ccc;}
+.reservForm .useArea .selectDate .legendBox {}
+.reservForm .useArea .selectDate .boxSelect {}
+.reservForm .useArea .selectDate .boxDisabled {}
+.reservForm .useArea .selectDate .boxAvailable {}
+.reservForm .useArea .selectDate .boxFull {background: #E8DFCC;}
+
+@media all and (max-width: 880px){
+    .reservForm {flex-direction: column; padding: 6rem 0 2rem; gap: 8rem}
+
+    .reservForm .formPanel {}
+    .reservForm .formTitle {font-size: 3.6rem;}
+    .reservForm .formArea {}
+    .reservForm .formRow {flex-direction: column; align-items: baseline; gap: 0.8rem; padding: 1.6rem 0;}
+
+    .reservForm .formLabel {font-size: 3rem; padding: 0.4rem 0;}
+
+    .reservForm .formCont {font-size: 3rem;}
+
+    .reservForm .formInput {height: 9.6rem; padding: 0 2.4rem; width: 100%; flex-shrink: inherit; font-size: 3rem;}
+    .reservForm .formSelect {height: 9.6rem; padding: 0 2.4rem; font-size: 3rem; background: url(/img/sub/ic_select_arr.svg) right 2.4rem center / 2.8rem 2.8rem no-repeat;}
+    .reservForm .formNotice {font-size: 2.4rem;}
+    .reservForm .formTextarea {font-size: 3rem; padding: 2.4rem; min-height: 32rem;}
+
+    .reservForm .emailCont {flex-wrap: wrap;}
+    .reservForm .emailCont .formInput {width: 31.8rem;}
+    .reservForm .emailCont .emailAt {font-size: 3rem;}
+
+    .reservForm .addressCont {}
+    .reservForm .addressCont .zipRow {gap: 1.2rem}
+    .reservForm .addressCont .addressBtn {width: 18.2rem; flex-shrink: 0; font-size: 3rem;}
+
+    .reservForm .radioCont {padding: 0;}
+    .reservForm .radioCont .radioItem {}
+    .reservForm .radioCont .radioItem .radioText {padding: 0.1rem 0 0.1rem 4.4rem;}
+    .reservForm .radioCont .radioItem .radioText::before {width: 3.2rem; height: 3.2rem; top: 0.4rem;}
+
+    .reservForm .fileCont {}
+    .reservForm .fileCont .fileRowGrid {flex-direction: column; gap: 1.2rem;}
+    .reservForm .fileCont .fileRow {}
+    .reservForm .fileCont .fileRow .fileBtn {width: 18.2rem; font-size: 3rem; flex-shrink: 0; padding: 3.1rem 0; line-height: 1;}
+    .reservForm .fileCont .fileNotice {font-size: 2.4rem;}
+
+    .reservForm .useArea {flex-direction: column;}
+    .reservForm .useArea .useTit {}
+    .reservForm .useArea .useTit .tit {font-size: 3rem;}
+    .reservForm .useArea .useTit .date {font-size: 3rem}
+    .reservForm .useArea .useTicket {}
+    .reservForm .useArea .ticketLst .lst input + .ticketLabel {font-size: 3rem; padding: 2rem 0;}
+    .reservForm .useArea .useDate {width: 100%;}
+    .reservForm .useArea .selectDate {}
+    .reservForm .useArea .selectDate .vc-pane {padding: 3.6rem 3.2rem 2.4rem;}
+    .reservForm .useArea .selectDate .vc-pane-header-wrapper {top: 3.8rem;}
+    .reservForm .useArea .selectDate .vc-header .vc-title {font-size: 3.6rem;}
+    .reservForm .useArea .selectDate .customDayCell {height: 6.8rem;}
+    .reservForm .useArea .selectDate .calendarLegend {}
+    .reservForm .useArea .selectDate .calendarLegend .legendItem {font-size: 2.4rem;}
+}
+
+
+.reservForm .infoPanel {width: 58.6rem; flex-shrink: 0; align-self: flex-start; border: 1px solid var(--fc84); padding: 4rem 4rem 6rem; border-radius: 0.4rem;}
+.reservForm .infoTitle {font-size: 2.4rem; padding: 1.2rem 0; font-weight: bold; border-bottom: 1px solid #888; margin-bottom: 3rem;}
+.reservForm .infoCont {padding-bottom: 2.4rem; border-bottom: 1px solid #666; margin-bottom: 3rem;}
+.reservForm .infoRow {display: flex; align-items: center; justify-content: space-between; font-size: 1.8rem;}
+.reservForm .infoRow + .infoRow {margin-top: 1.6rem;}
+.reservForm .infoRow .infoLabel {font-weight: 500;}
+.reservForm .infoRow .infoValue {color: #363636;}
+.reservForm .infoRow .roomValue {display: flex; align-items: center; gap: 1.6rem;}
+.reservForm .infoRow .roomValue .roomName {}
+.reservForm .infoRow .roomValue .btnDetail {font-size: 1.6rem; background: #F7F7F7; padding: 0.7rem 1.2rem; border-radius: 0.2rem; border: 1px solid #ccc;}
+.reservForm .infoRow .dateGroup {}
+.reservForm .infoRow .dateGroup .dateRow {display: flex; gap: 2.4rem}
+.reservForm .infoRow .dateGroup .dateRow + .dateRow {margin-top: 0.4rem;}
+.reservForm .infoRow .costGroup {}
+.reservForm .infoRow .costGroup .costRow {display: flex; gap: 2.4rem}
+.reservForm .infoRow .costGroup .costRow + .costRow {margin-top: 0.4rem;}
+.reservForm .infoRow .totalPeople {}
+.reservForm .infoRow .priceGroup {}
+.reservForm .infoRow .priceGroup .priceRow {display: flex; gap: 2.8rem;}
+.reservForm .infoRow .priceGroup .priceRow + .priceRow {margin-top: 0.4rem;}
+.reservForm .totalRow {padding: 1.6rem 0;}
+.reservForm .totalRow .totalPrice {font-size: 2.8rem; font-weight: 600; line-height: 1.4;}
+.reservForm .termsWrap {margin-bottom: 3rem;}
+.reservForm .termsWrap .termsBox {}
+.reservForm .termsWrap .termsBox + .termsBox {margin-top: 2rem;}
+.reservForm .termsWrap .termsBox .termsTit {font-size: 1.6rem; margin-bottom: 0.8rem; padding-left: 1.8rem;}
+.reservForm .termsWrap .termsBox .termsTit::before {content: ''; display: block; position: absolute; width: 0.8rem; height: 0.8rem; background-color: #AA8163; border-radius: 0.1rem; left: 0; top: 50%; transform: translateY(-50%) rotate(45deg);}
+.reservForm .termsWrap .termsBox .termsTxt {width: 100%; background-color: #FAFAFA; padding: 1.6rem; border: 1px solid #ccc; border-radius: 0.2rem; box-shadow: none; min-height: 12rem; font-size: 1.5rem; font-family: inherit; color: #545454;}
+.reservForm .termsWrap .termsBox .termsTxt:focus-visible {border: 1px solid #ccc; outline: none;}
+.reservForm .termsWrap .termsAgree {margin-top: 1rem; font-size: 1.6rem;}
+.reservForm .termsWrap .termsAgree .chkItemInput {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+.reservForm .termsWrap .termsAgree .chkItemText {padding-left: 2.6rem; cursor: pointer; display: inline-block; line-height: 1.2;}
+.reservForm .termsWrap .termsAgree .chkItemText::before {content: ''; display: block; position: absolute; width: 1.8rem; height: 1.8rem; background: url('/img/sub/ic_chk2_off.svg') center/contain no-repeat; left: 0; top: 0.1rem;}
+.reservForm .termsWrap .termsAgree .chkItemInput:checked + .chkItemText::before {background: url('/img/sub/ic_chk2_on.svg') center/contain no-repeat;}
+.reservForm .btnGroup {display: flex; gap: 0.8rem}
+.reservForm .btnGroup button {font-size: 1.8rem; width: 100%; padding: 1.25rem 0; transition: 0.2s;}
+.reservForm .btnGroup .btnSubmit {background-color: var(--fcp); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: bold;}
+.reservForm .btnGroup .btnSubmit:hover {background-color: #32662D;}
+.reservForm .btnGroup .btnCancel {border: 1px solid #666; color: #363636; font-weight: 500;}
+.reservForm .btnGroup .btnCancel:hover {background-color: var(--fc84); border: 1px solid rgba(255,255,255,0.2); font-weight: bold; color: #fff;}
+
+@media all and (max-width: 880px){
+    .reservForm .infoPanel {width: 100%;}
+    .reservForm .infoTitle {font-size: 3.6rem;}
+    .reservForm .infoCont {}
+    .reservForm .infoRow {flex-direction: column; align-items: baseline; font-size: 3rem; gap: 0.8rem;}
+    .reservForm .infoRow + .infoRow {margin-top: 4rem;}
+    .reservForm .infoRow .infoLabel {}
+    .reservForm .infoRow .infoValue {width: 100%;}
+    .reservForm .infoRow .roomValue {justify-content: space-between;}
+    .reservForm .infoRow .roomValue .roomName {}
+    .reservForm .infoRow .roomValue .btnDetail {font-size: 2.6rem; padding: 1.8rem 2rem; line-height: 1;}
+    .reservForm .infoRow .dateGroup {}
+    .reservForm .infoRow .dateGroup .dateRow {justify-content: space-between;}
+    .reservForm .infoRow .costGroup {}
+    .reservForm .infoRow .costGroup .costRow {justify-content: space-between;}
+    .reservForm .infoRow .priceGroup .priceRow {justify-content: space-between}
+    .reservForm .totalRow {flex-direction: row;}
+    .reservForm .totalRow .infoValue {width: auto;}
+    .reservForm .totalRow .totalPrice {font-size: 4.8rem;}
+    .reservForm .termsWrap {}
+    .reservForm .termsWrap .termsBox {}
+    .reservForm .termsWrap .termsBox .termsTit {font-size: 2.8rem; padding-left: 2.8rem;}
+    .reservForm .termsWrap .termsBox .termsTit::before {width: 1.6rem; height: 1.6rem;}
+    .reservForm .termsWrap .termsBox .termsTxt {font-size: 2.4rem; padding: 2rem; min-height: 20rem;}
+    .reservForm .termsWrap .termsAgree {font-size: 2.4rem;}
+    .reservForm .termsWrap .termsAgree .chkItemInput {}
+    .reservForm .termsWrap .termsAgree .chkItemText {padding-left: 3.8rem;}
+    .reservForm .termsWrap .termsAgree .chkItemText::before {width: 3.2rem; height: 3.2rem; top: -0.1rem;}
+    .reservForm .btnGroup {}
+    .reservForm .btnGroup button {font-size: 2.8rem; padding: 2.45rem 0;}
+}
+
+/*――――――――――――――――――――――――――――――――――――
+    하우스&오피스 예약완료
+―――――――――――――――――――――――――――――――――――――*/
+.reserveComplete {padding: 18rem 0 20rem;}
+.reserveComplete .title {}
+.reserveComplete .desc {margin: 2.4rem 0 6rem;}
+.reserveComplete .desc b {}
+.reserveComplete .desc span {}
+.reserveComplete .btns {justify-content: center; gap: 0.8rem}
+.reserveComplete .btns .btn {width: 22.6rem; border-radius: 0.2rem; transition: 0.2s; padding: 1.35rem 0; font-size: 1.8rem;}
+.reserveComplete .btns .statusBtn {color: #fff; border: 1px solid var(--fcb); background-color: var(--fcb);}
+.reserveComplete .btns .statusBtn:hover {background-color: #846A59; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: bold;}
+.reserveComplete .btns .homeBtn {border: 1px solid #666;}
+.reserveComplete .btns .homeBtn:hover {background-color: #846A59; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: bold;}
+
+@media all and (max-width: 880px){
+    .reserveComplete {padding: 15rem 0 20rem;}
+    .reserveComplete .title {font-size: 4.8rem;}
+    .reserveComplete .desc {font-size: 3.2rem;}
+    .reserveComplete .btns {}
+    .reserveComplete .btns .btn {font-size: 2.8rem; width: 28rem; padding: 2.45rem 0;}
+}
+
+
+.officeRsv {display: flex; gap: 6rem; padding: 6rem 0 16rem;}
+.officeRsv .officeSwiper {border-radius: 0.4rem; overflow: hidden; width: 83rem; flex-shrink: 0; align-self: flex-start;}
+.officeRsv .officeSwiper::before {content: ''; display: block; position: absolute; width: 100%; height: 14%; background: #000000;
+background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); bottom: 0; z-index: 9;}
+.officeRsv .officeSwiper .slidePg {position: absolute; left: 2.4rem; bottom: 2.4rem; top: auto; width: auto; padding: 0.8rem 2rem; font-size: 1.6rem; color: #fff; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.4); border-radius: 8rem; line-height: 1; z-index: 9;}
+.officeRsv .officeSwiper .slidePg .fractionBar {margin: 0 0.6rem; opacity: 0.6;}
+.officeRsv .officeSwiper .slideNav {position: absolute; right: 2.4rem; bottom: 2.4rem; gap: 2rem; z-index: 9;}
+.officeRsv .officeSwiper .slideNav .prev,
+.officeRsv .officeSwiper .slideNav .next {width: 2.8rem; cursor: pointer; flex-shrink: 0; opacity: 0.6;}
+.officeRsv .officeSwiper .slideNav .prev:hover,
+.officeRsv .officeSwiper .slideNav .next:hover {opacity: 1;}
+.officeRsv .officeDetail {width: 100%;}
+.officeRsv .detailBox {padding: 3.2rem 2.8rem 3.4rem;}
+.officeRsv .detailBox:first-child {padding-top: 0;}
+.officeRsv .detailBox + .detailBox {border-top: 1px solid #ccc;}
+.officeRsv .detailBox .boxTit {margin-bottom: 2.4rem;}
+.officeRsv .detailBox .boxTit::before {content: ''; display: block; position: absolute; width: 1.8rem; height: 1.8rem; background: url('/img/sub/ic_modal_tit.svg') center/contain; left: -2.6rem; top: 50%; transform: translateY(-50%);}
+.officeRsv .detailBox .infoLst {}
+.officeRsv .detailBox .infoLst .lst {}
+.officeRsv .detailBox .infoLst .lst + .lst {margin-top: 1.6rem;}
+.officeRsv .detailBox .infoLst .lst.mt40 {margin-top: 4rem;}
+.officeRsv .detailBox .infoLst .lst .opt {min-width: 10rem; margin-right: 1.2rem;}
+.officeRsv .detailBox .infoLst .lst .con {}
+.officeRsv .detailBox .infoLst .lst .con li {}
+.officeRsv .detailBox .infoLst .lst .con li + li {margin-top: 0.4rem;}
+.officeRsv .detailBox .infoLst .lst .con li span.gtxt {font-size: 1.6rem; color: #888; padding-left: 1.2rem;}
+.officeRsv .detailBox .infoLst .lst .fac {gap: 1.6rem; width: 100%;}
+.officeRsv .detailBox .infoLst .lst .fac li {display: flex; flex-direction: column; align-items: center; text-align: center; width: calc((100% - 8rem) / 6); gap: 0.4rem}
+.officeRsv .detailBox .infoLst .lst .fac li img {max-width: 7.2rem;}
+.officeRsv .detailBox .infoLst .lst .fac li span {font-size: 1.6rem; color: #363636; line-height: 1.3;}
+.officeRsv .btnsArea {gap: 0.8rem; margin: 4rem 0 2rem;}
+.officeRsv .btnsArea button {padding: 1.25rem; font-size: 1.8rem; width: 100%; border-radius: 0.2rem; transition: 0.2s; line-height: 1.4;}
+.officeRsv .btnsArea .confirmBtn {font-weight: bold; border: 1px solid rgba(255,255,255,0.2); background: var(--fcp); color: #fff;}
+.officeRsv .btnsArea .confirmBtn:hover {background: #32662D;}
+
+@media all and (max-width: 880px){
+    .officeRsv {flex-direction: column; padding: 6rem 0 20rem;}
+    .officeRsv .officeSwiper {width: 100%;}
+    .officeRsv .officeSwiper .slideNav img {display: block; width: 100%;}
+    .officeRsv .officeSwiper .slidePg {font-size: 2.2rem;}
+    .officeRsv .detailBox .boxTit {font-size: 3.6rem;}
+    .officeRsv .detailBox .infoLst .lst {flex-direction: column; align-items: baseline; gap: 1.2rem}
+    .officeRsv .detailBox .infoLst .lst + .lst {margin-top: 2.4rem;}
+    .officeRsv .detailBox .infoLst .lst .opt {font-size: 3.2rem; line-height: 1.4;}
+    .officeRsv .detailBox .infoLst .lst .con {font-size: 3rem; line-height: 1.4;}
+    .officeRsv .detailBox .infoLst .lst .con li {flex-direction: column; align-items: baseline; gap: 1.2rem;}
+    .officeRsv .detailBox .infoLst .lst .con li span.gtxt {font-size: 2.4rem;}
+    .officeRsv .detailBox .infoLst .lst .fac li {width: calc((100% - 6.4rem) / 5);}
+    .officeRsv .detailBox .infoLst .lst .fac li img {max-width: 9.2rem;}
+    .officeRsv .detailBox .infoLst .lst .fac li span {font-size: 2.2rem;}
+    .officeRsv .btnsArea {}
+    .officeRsv .btnsArea button {font-size: 2.8rem; padding: 3rem 0; line-height: 1;}
+    
+}
+
