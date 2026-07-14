@@ -55,6 +55,17 @@ export const menuGroups = [
             {name: 'commuContact', label: '문의하기'},
         ],
     },
+    {
+        key: 'mypage',
+        title: '마이페이지',
+        image: 6,
+        tabs: [
+            {name: 'myReservations', label: '예약신청 현황'},
+            {name: 'myProfile',      label: '나의 정보'},
+            // 탭엔 안 보이지만 마이페이지 그룹에 속하는 하위 페이지
+            {name: 'myReservationDetail', label: '예약신청 현황', hidden: true},
+        ],
+    },
 ];
 
 // 라우터명으로 소속 그룹 찾기

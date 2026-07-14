@@ -35,6 +35,11 @@ const routes = [
             {path: 'community/notice',  name: 'commuNotice',    component: () => import('@/views/community/Notice.vue'),  meta: {title: '공지사항'}},
             {path: 'community/faq',     name: 'commuFaq',       component: () => import('@/views/community/Faq.vue'),     meta: {title: '자주 묻는 질문'}},
             {path: 'community/contact', name: 'commuContact',   component: () => import('@/views/community/Contact.vue'), meta: {title: '문의하기', }},
+
+            // 마이페이지
+            {path: 'mypage/reservations',     name: 'myReservations',     component: () => import('@/views/mypage/Reservations.vue'),     meta: {title: '예약신청 현황'}},
+            {path: 'mypage/reservations/:id', name: 'myReservationDetail', component: () => import('@/views/mypage/ReservationDetail.vue'), meta: {title: '예약신청 현황', activeTab: 'myReservations'}},
+            {path: 'mypage/profile',          name: 'myProfile',          component: () => import('@/views/mypage/Profile.vue'),          meta: {title: '나의 정보'}},
         ],
     },
 
