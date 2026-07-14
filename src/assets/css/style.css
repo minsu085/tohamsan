@@ -193,11 +193,14 @@
 #sub {}
 #sub .inner {}
 #sub .subCommTit {margin-top: 8rem; font-weight: bold;}
+#sub .subCommTit .btn {padding: 1.5rem 3rem; border: 1px solid #666; font-size: 1.6rem; border-radius: 0.2rem; line-height: 1; transition: 0.1s;}
+#sub .subCommTit .btn:hover {color: #fff; font-weight: bold; border: 1px solid rgba(255,255,255,0.2); background-color: var(--fc84);}
 
 @media all and (max-width: 880px){
     #sub {}
     #sub .inner {max-width: var(--innerMo);}
     #sub .subCommTit {font-size: 4.8rem; margin-top: 1.6rem;}
+    #sub .subCommTit .btn {font-size: 2.8rem; padding: 2.6rem 4rem;}
 }
 
 /*―――――――――――――――
@@ -724,7 +727,7 @@ background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); 
 }
 
 /*――――――――――――――――――――――――――――――――
-    마이페이지 > 예약신청 현황
+    마이페이지 > 예약신청 현황 목록
 ――――――――――――――――――――――――――――――――――*/
 .myReserv {padding: 6rem 0 16rem}
 
@@ -823,4 +826,63 @@ background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); 
     .paging .pageList {}
     .paging .pageList .pageNum {}
     .paging .pageList .pageNum button {width: 7.2rem; height: 7.2rem; font-size: 2.8rem;}
+}
+
+/*――――――――――――――――――――――――――――――――
+    마이페이지 > 예약신청 현황 상세
+――――――――――――――――――――――――――――――――――*/
+.myReservDetail {padding: 6rem 0 16rem;}
+.myReservDetail .rsvPanel {}
+.myReservDetail .rsvPanel + .rsvPanel {margin-top: 6rem;}
+.myReservDetail .panelTit {font-size: 2.4rem; font-weight: bold; color: #322D2D; padding: 1.2rem 0;}
+.myReservDetail .panelLst {border-top: 1px solid #888; border-bottom: 1px solid #888; display: flex; flex-wrap: wrap;}
+.myReservDetail .panelLst .lst {flex-shrink: 0; font-size: 1.6rem; display: flex; min-height: 5.6rem;}
+.myReservDetail .panelLst .lst.grid1 {width: 100%;}
+.myReservDetail .panelLst .lst.grid2 {width: calc(100% / 2);}
+.myReservDetail .panelLst .lst.grid3 {width: calc(100% / 3);}
+.myReservDetail .panelLst .lst.bd {border-bottom: 1px solid #ccc;}
+.myReservDetail .panelLst .opt {width: 16rem; flex-shrink: 0; background-color: #F7F7F7; display: flex; align-items: center; padding-left: 2.4rem;}
+.myReservDetail .panelLst .con {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 2.4rem;}
+.myReservDetail .panelLst .con .txt {color: #363636;}
+.myReservDetail .panelLst .con .txt.return {color: #C50000;}
+.myReservDetail .panelLst .con .txt em {color: #363636; font-weight: 600;}
+.myReservDetail .panelLst .con .txt .fileDown {text-decoration: underline; text-underline-offset: 3px;}
+.myReservDetail .panelLst .con .txt .fileDown.none {text-decoration: none; color: #888; pointer-events: none; cursor: default;}
+.myReservDetail .panelLst .con .btn {border-radius: 0.2rem; width: 8rem; height: 3.6rem; color: #363636;}
+.myReservDetail .panelLst .con .payBtn {border: 1px solid #CCCCCC; background: #F7F7F7; cursor: default;}
+.myReservDetail .panelLst .con .payBtn.payStart {background-color: var(--fcp); border: 1px solid var(--fcp); color: #fff;}
+.myReservDetail .panelLst .con .detailBtn {border: 1px solid #CCCCCC; background: #F7F7F7;}
+.myReservDetail .panelLst .con .returnBtn {color: #C50000; border: 1px solid #C50000;}
+
+.myReservDetail .btnPanel {display: flex; justify-content: flex-end; margin-top: 6rem; gap: 0.8rem}
+.myReservDetail .btnPanel .btn {border-radius: 0.2rem; transition: 0.1s; width: 12rem; height: 4.8rem; font-size: 1.6rem;}
+.myReservDetail .btnPanel .btn:hover {border: 1px solid rgba(255,255,255,0.2); color: #fff; background-color: #846A59;}
+.myReservDetail .btnPanel .lineBtn {border: 1px solid #666; background: #fff; color: #363636; font-weight: 500;}
+.myReservDetail .btnPanel .cancelBtn {border: 1px solid #333; background: #333; color: #fff}
+.myReservDetail .btnPanel .updateBtn {border: 1px solid #4E3C33; background: #4E3C33; color: #fff}
+.myReservDetail .btnPanel .lineBtn:hover {font-weight: bold;}
+.myReservDetail .btnPanel .cancelBtn:hover {font-weight: 600;}
+.myReservDetail .btnPanel .updateBtn:hover {font-weight: 600}
+
+
+@media all and (max-width: 880px){
+    .myReservDetail {}
+    .myReservDetail .rsvPanel {}
+    .myReservDetail .panelTit {font-size: 3.6rem; padding: 2rem 0;}
+    .myReservDetail .panelLst {}
+    .myReservDetail .panelLst .lst {font-size: 3rem; min-height: 9rem; border-bottom: 1px solid #ccc;}
+    .myReservDetail .panelLst .lst:last-child {border: 0;}
+    .myReservDetail .panelLst .lst.grid1 {width: 100%;}
+    .myReservDetail .panelLst .lst.grid2 {width: 100%;}
+    .myReservDetail .panelLst .lst.grid3 {width: 100%;}
+    .myReservDetail .panelLst .opt {padding-left: 1.2rem;}
+    .myReservDetail .panelLst .con {padding: 2rem 2.4rem;}
+    .myReservDetail .panelLst .con .txt {}
+    .myReservDetail .panelLst .con .btn {width: 12rem; height: 6.3rem;}
+    .myReservDetail .panelLst .con .payBtn {}
+    .myReservDetail .panelLst .con .payBtn.payWatit {}
+    .myReservDetail .panelLst .con .detailBtn {}
+
+    .myReservDetail .btnPanel {}
+    .myReservDetail .btnPanel .btn {width: 17.7rem; height: 8.8rem; font-size: 2.8rem;}
 }
